@@ -48,8 +48,7 @@ cacheSolve <- function(x, ...) {
                 return(s)
         }
         data <- x$get()
-        dimdata<-dim(data)[1]                ## Get the dimension of the matrix
-        s <- solve(data, diag(dimdata),...)  ## Calculate the inverse matrix 
+        s <- solve(data)          ## Calculate the inverse matrix 
         x$setinverse(s)           ## Cache the inverse matrix
         s                         ## Return the matrix that is the inverse of 'x'
 }
